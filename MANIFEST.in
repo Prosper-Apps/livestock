@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include livestock *.css
+recursive-include livestock *.csv
+recursive-include livestock *.html
+recursive-include livestock *.ico
+recursive-include livestock *.js
+recursive-include livestock *.json
+recursive-include livestock *.md
+recursive-include livestock *.png
+recursive-include livestock *.py
+recursive-include livestock *.svg
+recursive-include livestock *.txt
+recursive-exclude livestock *.pyc
