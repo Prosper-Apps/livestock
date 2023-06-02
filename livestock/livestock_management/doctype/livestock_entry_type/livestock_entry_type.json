@@ -1,0 +1,87 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:entry_type",
+ "creation": "2023-05-31 15:40:46.274323",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "entry_type",
+  "column_break_k89rt",
+  "effect_on_qty",
+  "section_break_dsjl1",
+  "description"
+ ],
+ "fields": [
+  {
+   "fieldname": "entry_type",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Entry Type",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "column_break_k89rt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "effect_on_qty",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Effect on Qty",
+   "options": "Increase\nDecrease\nNeutral",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_dsjl1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-06-01 22:55:03.744620",
+ "modified_by": "Administrator",
+ "module": "Livestock Management",
+ "name": "Livestock Entry Type",
+ "name_case": "Title Case",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Agriculture Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

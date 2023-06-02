@@ -1,0 +1,146 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:LB-{livestock}-{DD}{MM}{YY}-{##}",
+ "creation": "2023-06-01 11:02:29.280381",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "company",
+  "column_break_gm1ys",
+  "date",
+  "section_break_2gctl",
+  "livestock",
+  "balance_section",
+  "current_balance",
+  "column_break_ymeh7",
+  "last_balance",
+  "section_break_7h9bq",
+  "last_transaction",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Company",
+   "options": "Company",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_gm1ys",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Now",
+   "fieldname": "date",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_2gctl",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "livestock",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Livestock",
+   "options": "Livestock",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "balance_section",
+   "fieldtype": "Section Break",
+   "label": "Balance",
+   "read_only": 1
+  },
+  {
+   "fieldname": "current_balance",
+   "fieldtype": "Int",
+   "label": "Current Balance",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_ymeh7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "last_balance",
+   "fieldtype": "Int",
+   "label": "Last Balance",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_7h9bq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "last_transaction",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Last Transaction",
+   "options": "Livestock Entry",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Livestock Balance",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-06-02 01:11:14.786810",
+ "modified_by": "Administrator",
+ "module": "Livestock Management",
+ "name": "Livestock Balance",
+ "name_case": "Title Case",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Agriculture User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
