@@ -31,8 +31,8 @@
   "comment",
   "more_details_section",
   "company",
-  "amended_from",
-  "abbr"
+  "abbr",
+  "amended_from"
  ],
  "fields": [
   {
@@ -176,7 +176,6 @@
   },
   {
    "fetch_from": "company.abbr",
-   "fetch_if_empty": 1,
    "fieldname": "abbr",
    "fieldtype": "Data",
    "hidden": 1,
@@ -189,7 +188,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-06-06 12:39:12.884296",
+ "modified": "2023-06-06 17:11:16.464353",
  "modified_by": "Administrator",
  "module": "Livestock Management",
  "name": "Livestock Entry",

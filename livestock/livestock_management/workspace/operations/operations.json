@@ -16,7 +16,7 @@
    "hidden": 0,
    "is_query_report": 0,
    "label": "Reports",
-   "link_count": 1,
+   "link_count": 2,
    "onboard": 0,
    "type": "Card Break"
   },
@@ -29,9 +29,19 @@
    "link_type": "Report",
    "onboard": 0,
    "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Livestock Mortality Report",
+   "link_count": 0,
+   "link_to": "Livestock Mortality Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   }
  ],
- "modified": "2023-06-06 16:04:20.460583",
+ "modified": "2023-06-06 17:03:44.808729",
  "modified_by": "Administrator",
  "module": "Livestock Management",
  "name": "Operations",
