@@ -1,0 +1,36 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"-SC-hXJ5Xv\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Operations</span>\",\"col\":12}},{\"id\":\"D77Grw2cFA\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"AOrbFsKzDm\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Livestock Entry\",\"col\":3}}]",
+ "creation": "2023-06-01 16:49:53.935363",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "mark-as-read",
+ "idx": 0,
+ "is_hidden": 0,
+ "label": "Operations",
+ "links": [],
+ "modified": "2023-06-06 12:50:05.080435",
+ "modified_by": "Administrator",
+ "module": "Livestock Management",
+ "name": "Operations",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 31.0,
+ "shortcuts": [
+  {
+   "color": "Green",
+   "doc_view": "New",
+   "label": "Livestock Entry",
+   "link_to": "Livestock Entry",
+   "type": "DocType"
+  }
+ ],
+ "title": "Operations"
+}
