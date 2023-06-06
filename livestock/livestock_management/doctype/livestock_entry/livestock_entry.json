@@ -3,7 +3,7 @@
  "allow_events_in_timeline": 1,
  "allow_import": 1,
  "allow_rename": 1,
- "autoname": "format:LE-{livestock}-{YY}{MM}{DD}-{###}",
+ "autoname": "format:LE-{abbr}-{livestock}-{YY}{MM}{DD}-{###}",
  "beta": 1,
  "creation": "2023-05-31 15:50:09.463738",
  "default_view": "List",
@@ -26,10 +26,13 @@
   "column_break_nj6tq",
   "disease",
   "section_break_b2qsg",
+  "customer",
+  "supplier",
   "comment",
   "more_details_section",
   "company",
-  "amended_from"
+  "amended_from",
+  "abbr"
  ],
  "fields": [
   {
@@ -66,7 +69,7 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "Livestock",
+   "label": "Livestock (Farm Animal)",
    "options": "Livestock",
    "reqd": 1
   },
@@ -100,7 +103,7 @@
    "fieldname": "comment",
    "fieldtype": "Small Text",
    "label": "Comment",
-   "mandatory_depends_on": "eval: doc.entry_type === 'Mortality' ||  doc.entry_type === 'Sale' ||  doc.entry_type === 'Purchase' ||  doc.entry_type === 'Gift';"
+   "mandatory_depends_on": "eval: doc.entry_type === 'Gift';"
   },
   {
    "fieldname": "amended_from",
@@ -154,12 +157,39 @@
    "print_hide": 1,
    "remember_last_selected_value": 1,
    "reqd": 1
+  },
+  {
+   "depends_on": "eval:  doc.entry_type === 'Slaughter/Sale';",
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "mandatory_depends_on": "eval:  doc.entry_type === 'Slaughter/Sale';",
+   "options": "Customer"
+  },
+  {
+   "depends_on": "eval: doc.entry_type === 'Purchase';",
+   "fieldname": "supplier",
+   "fieldtype": "Link",
+   "label": "Supplier",
+   "mandatory_depends_on": "eval: doc.entry_type === 'Purchase';",
+   "options": "Supplier"
+  },
+  {
+   "fetch_from": "company.abbr",
+   "fetch_if_empty": 1,
+   "fieldname": "abbr",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Company Abbreviation",
+   "print_hide": 1,
+   "read_only": 1,
+   "report_hide": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-06-01 21:49:33.908643",
+ "modified": "2023-06-06 12:39:12.884296",
  "modified_by": "Administrator",
  "module": "Livestock Management",
  "name": "Livestock Entry",
