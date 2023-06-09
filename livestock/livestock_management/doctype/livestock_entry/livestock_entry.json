@@ -17,9 +17,13 @@
   "date",
   "section_break_fmwkn",
   "livestock",
+  "section_break_ow18u",
+  "current_balance",
   "column_break_7oew6",
   "quantity",
   "column_break_sixmi",
+  "balance_after_transaction",
+  "section_break_pv4b2",
   "value",
   "section_break_tzk9x",
   "mortality_reason",
@@ -183,12 +187,35 @@
    "print_hide": 1,
    "read_only": 1,
    "report_hide": 1
+  },
+  {
+   "depends_on": "eval: doc.entry_type;",
+   "fieldname": "section_break_ow18u",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "current_balance",
+   "fieldtype": "Int",
+   "label": "Current Balance",
+   "read_only": 1
+  },
+  {
+   "fieldname": "balance_after_transaction",
+   "fieldtype": "Int",
+   "label": "Balance After Transaction",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval: doc.entry_type;",
+   "fieldname": "section_break_pv4b2",
+   "fieldtype": "Section Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-06-06 17:11:16.464353",
+ "modified": "2023-06-07 11:30:51.445995",
  "modified_by": "Administrator",
  "module": "Livestock Management",
  "name": "Livestock Entry",
