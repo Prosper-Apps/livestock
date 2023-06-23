@@ -74,7 +74,7 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Livestock (Farm Animal)",
-   "options": "Livestock",
+   "options": "Livestock Type",
    "reqd": 1
   },
   {
@@ -95,8 +95,9 @@
    "depends_on": "eval: doc.entry_type === 'Slaughter/Sale' || doc.entry_type === 'Purchase' || doc.entry_type === 'Mortality';",
    "fieldname": "value",
    "fieldtype": "Currency",
-   "label": "Price / Value",
-   "mandatory_depends_on": "eval: doc.entry_type === 'Slaughter/Sale' || doc.entry_type === 'Purchase' || doc.entry_type === 'Mortality';"
+   "label": "Total Value",
+   "mandatory_depends_on": "eval: doc.entry_type === 'Slaughter/Sale' || doc.entry_type === 'Purchase' || doc.entry_type === 'Mortality';",
+   "options": "currency"
   },
   {
    "depends_on": "eval: doc.entry_type;",
@@ -215,7 +216,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-06-07 11:30:51.445995",
+ "modified": "2023-06-22 14:17:22.647520",
  "modified_by": "Administrator",
  "module": "Livestock Management",
  "name": "Livestock Entry",

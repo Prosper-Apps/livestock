@@ -7,16 +7,49 @@ var entry_types = [];
 frappe.ui.form.on('Livestock Entry', {
 	
 	refresh: function(frm) {
-		frappe.db.get_list("Livestock Balance", {fields:["livestock", "current_balance"], limit: 0, filters: {company: frm.doc.company}})
+
+		let allowed_livestock = [];
+
+		frappe.call({
+			method: "livestock.livestock_management.doctype.livestock_entry.livestock_entry.get_preload_data",
+			args: {
+				company: frm.doc.company
+			}
+		})
+		.then(data => {
+			//console.table(data.message.company_settings.livestock);
+			allowed_livestock = data.message.company_settings.livestock.map(d => d['name']);
+			entry_types = data.message.entry_types;
+			livestock_balances = data.message.livestock_balances;
+			console.table(entry_types);	
+			console.table(livestock_balances);
+		
+			cur_frm.set_query("livestock", function() {
+				return {
+					"filters": [ 
+						["name", "in", allowed_livestock ]
+					]
+					
+				};
+			});
+		});	
+		
+
+		/**frappe.db.get_list("Livestock Balance", {fields:["livestock", "current_balance"], limit: 0, filters: {company: frm.doc.company}})
 		.then(balances => {
-			console.table(balances);
+			//console.table(balances);
 			livestock_balances = balances;
 		});
+		
 		frappe.db.get_list("Livestock Entry Type", {fields:["entry_type", "effect_on_qty"], limit: 0})
 		.then(entries => {
 			console.table(entries);
 			entry_types = entries;
 		});
+		*/
+
+		
+
 	},
 	livestock: function(frm) {
 		var balance = getCurrentBalance(livestock_balances, frm.doc.livestock);

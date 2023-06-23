@@ -15,8 +15,8 @@ class LivestockEntry(Document):
         )
 
         if not existing_balance:
-            if self.entry_type != "Stock Take":
-                frappe.throw(_("You need to enter the first <strong>Stock Take</strong> entry for <strong>{0}</strong>.").format(self.livestock))
+            if self.entry_type != "Stock Take" and self.entry_type != "Purchase":
+                frappe.throw(_("Your first entry should be <strong>Purchase</strong> or <strong>Stock Take</strong>  entry for <strong>{0}</strong>.").format(self.livestock))
 
             # Create initial Livestock Balance entry for Stock Take
             livestock_balance = frappe.new_doc("Livestock Balance")
@@ -72,7 +72,8 @@ class LivestockEntry(Document):
         frappe.errprint("Cancelled Livestock Entry and updated Livestock Balance")
 
     def recalculate_balance(self, last_balance):
-        # Adjust the balances starting from the previous stock take
+        # returns the balance of the livestock on the current form 
+        # starting from the previous stock take
         previous_stock_take = frappe.get_all(
             "Livestock Entry",
             filters={
@@ -105,8 +106,6 @@ class LivestockEntry(Document):
             limit=0
         )
 
-        frappe.errprint(stock_entries)
-
         for entry in stock_entries:
             if entry.entry_type == "Stock Take":
                 last_balance = entry.quantity
@@ -122,3 +121,16 @@ class LivestockEntry(Document):
                 frappe.errprint("Adjusted balance for Decrease")
 
         return last_balance
+
+@frappe.whitelist()
+def get_preload_data(company):
+    company_settings = frappe.get_doc("Company Settings", company)
+    entry_types = frappe.get_all("Livestock Entry Type", fields=["entry_type", "effect_on_qty"], limit=0)
+    livestock_balances = frappe.get_all("Livestock Balance", fields=["livestock", "current_balance"], limit= 0, filters= {'company': company})
+    #frappe.errprint(entry_types)
+
+    return {
+        'company_settings': company_settings,
+        'entry_types': entry_types,
+        'livestock_balances': livestock_balances
+    }
