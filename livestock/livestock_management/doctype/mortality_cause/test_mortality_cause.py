@@ -5,5 +5,5 @@
 from frappe.tests.utils import FrappeTestCase
 
 
-class TestMortalityReason(FrappeTestCase):
+class TestMortalityCause(FrappeTestCase):
 	pass

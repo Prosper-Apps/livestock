@@ -125,7 +125,7 @@
    "fieldtype": "Link",
    "label": "Mortality Reason",
    "mandatory_depends_on": "eval: doc.entry_type === 'Mortality';",
-   "options": "Mortality Reason"
+   "options": "Mortality Cause"
   },
   {
    "fieldname": "column_break_nj6tq",
@@ -216,7 +216,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-06-22 14:17:22.647520",
+ "modified": "2024-02-18 17:17:20.826297",
  "modified_by": "Administrator",
  "module": "Livestock Management",
  "name": "Livestock Entry",
