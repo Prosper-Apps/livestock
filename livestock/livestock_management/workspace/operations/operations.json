@@ -9,10 +9,10 @@
  "hide_custom": 1,
  "icon": "mark-as-read",
  "idx": 0,
- "is_hidden": 0,
+ "is_hidden": 1,
  "label": "Operations",
  "links": [],
- "modified": "2024-02-18 20:40:25.450043",
+ "modified": "2024-03-03 14:05:13.724356",
  "modified_by": "Administrator",
  "module": "Livestock Management",
  "name": "Operations",
@@ -22,7 +22,7 @@
  "public": 1,
  "quick_lists": [],
  "roles": [],
- "sequence_id": 2.0,
+ "sequence_id": 3.0,
  "shortcuts": [
   {
    "color": "Grey",
